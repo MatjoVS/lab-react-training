@@ -1,26 +1,33 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import IdCard from './components/IdCard';
+import Greetings from './components/Greetings';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div className='App'>
+       <IdCard 
+     lastName='Lomu'
+     firtName='Jonah'
+     gender='Male'
+     height={196}
+     birth={"1975-05-12"}
+     picture='./jonahLomu.jpeg'/>
+
+     <IdCard
+     lastName='Mat'
+     firstName='VS'
+     gender='male'
+     height={184.5}
+     birth={"1789-07-14"}
+     picture=''
+    />
+    <Greetings lang="sw" children=' Mat'/>
+    <Greetings lang="fr" chidren=' Jonah'/>
+    <Random min={1} max={6}/>
+    <Random min={1} max={100}/>
+</div>
+  )
 }
 
 export default App;
